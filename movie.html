@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Movie{
+            constructor(title,studio,rating){
+                this.title=title;
+                this.studio=studio;
+                if(rating==null)
+                    this.rating="PG"
+                else
+                     this.rating=rating;
+            }
+            getPG(movies){
+                var moviewithratingpg=[];
+               movies.forEach((element) => {
+                if(element.rating=="PG")
+                moviewithratingpg.push(element);
+               });
+               console.log(moviewithratingpg)
+            }
+            getPG13(movies){
+                var moviewithrating=movies.filter((element)=>element.rating=="PG13")
+          console.log(moviewithrating)
+            }
+        }
+        var movie1=new Movie("avengers","marvel studios","PG13");
+        var movie2=new Movie("iron man","marvel studios");
+        var movie3=new Movie("the batman","dc","PG13");
+        var movie4=new Movie("batman begins","WB","PG13");
+        var movie5=new Movie("dead pool","fox","PG18")
+    var movies=[];
+    movies.push(movie1,movie2,movie3,movie4,movie5);
+    console.log(movies)
+    movie1.getPG(movies)
+    movie2.getPG1(movies)
+
+
+
+
+  console.log(movie1,movie2,movie3,movie4)
+    </script>
+</body>
+</html>
